@@ -1,0 +1,48 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: El directorio intermedio (x64\Release\) contiene archivos compartidos de otro proyecto (SFML practice.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  SFML practice.cpp
+C:\Users\enocg\source\repos\SFML practice\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:         ]
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:         ]
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:         ]
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:         ]
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:         ]
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:         ]
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:         ]
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:         with
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:         [
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:             T=float
+C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:         ]
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 392 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  SFML practice.vcxproj -> C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\x64\Release\Proyecto1_egarro.exe
