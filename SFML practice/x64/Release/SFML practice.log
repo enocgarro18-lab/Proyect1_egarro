@@ -1,48 +1,165 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: El directorio intermedio (x64\Release\) contiene archivos compartidos de otro proyecto (SFML practice.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  SFML practice.cpp
-C:\Users\enocg\source\repos\SFML practice\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,70): warning C4244:         ]
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(158,55): warning C4244:         ]
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,92): warning C4244:         ]
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(232,70): warning C4244:         ]
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,70): warning C4244:         ]
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(254,55): warning C4244:         ]
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,70): warning C4244:         ]
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:         with
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:         [
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:             T=float
-C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\SFML practice\SFML practice.cpp(282,53): warning C4244:         ]
+  Animations.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+  Board.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,75): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,75): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,75): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,75): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,75): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,58): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,58): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,58): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,58): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(269,58): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,71): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,71): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,71): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,71): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,71): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,54): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,54): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,54): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,54): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(306,54): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(414,68): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(414,51): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(442,74): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(442,57): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,97): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,97): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,97): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,97): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,97): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,73): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,73): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,73): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,73): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(786,73): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,75): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,75): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,75): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,75): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,75): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,58): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,58): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,58): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,58): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(800,58): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,71): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,71): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,71): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,71): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,71): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,55): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,55): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,55): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,55): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(817,55): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,71): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,71): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,71): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,71): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,71): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,55): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,55): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,55): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,55): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Board.cpp(820,55): warning C4244:         ]
+  BombGem.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+  Game.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,59): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,59): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,59): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,59): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,59): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,44): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,44): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,44): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,44): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(202,44): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,68): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,68): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,68): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,68): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,68): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,44): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,44): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,44): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,44): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(201,44): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,59): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,59): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,59): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,59): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,59): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,44): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,44): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,44): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,44): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(210,44): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(209,44): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(209,44): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(209,44): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(209,44): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(209,44): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,76): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,76): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,76): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,76): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,76): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,53): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,53): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,53): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,53): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(267,53): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,64): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,64): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,64): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,64): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,64): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,47): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,47): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,47): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,47): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(268,47): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,75): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,75): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,75): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,75): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,75): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,52): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,52): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,52): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,52): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(282,52): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,63): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,63): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,63): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,63): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,63): warning C4244:         ]
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,46): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,46): warning C4244:         with
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,46): warning C4244:         [
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,46): warning C4244:             T=float
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Game.cpp(287,46): warning C4244:         ]
+  Gem.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Gem.cpp(8,33): warning C4834: Descartar el valor de retorno de la función con el atributo [[nodiscard]]
+  Level.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\Level.cpp(33,15): warning C4566: el carácter representado por el nombre de carácter universal '\u2713' no se puede representar en la página de códigos actual (1252)
+  NormalGem.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+  Obstacle.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
+  main.cpp
+C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\SFML practice\include\SFML\System\Exception.hpp(41,47): warning C4275: se ha utilizado una interfaz no de DLL class 'std::runtime_error' como base para la interfaz DLL class 'sf::Exception'
   Generando código
-  Previous IPDB not found, fall back to full compilation.
-  All 392 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 462 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
-  SFML practice.vcxproj -> C:\Users\enocg\OneDrive\Escritorio\Programacion1\Proyecto1_egarro\x64\Release\Proyecto1_egarro.exe
+  SFML practice.vcxproj -> C:\Users\enocg\Proyectos\Proyectos academicos\Programacion1\Progra1\Proyecto1_egarro original\x64\Release\Proyecto1_egarro.exe

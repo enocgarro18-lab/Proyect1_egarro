@@ -1,151 +1,215 @@
 ﻿#include "Game.h"
 #include <iostream>
-#include <optional>
-#include <cstdlib>
-#include <ctime>
 
 Game::Game()
-    : window(sf::VideoMode({ 800 , 600 }), "Match-3 SFML 3.0")
-    , backgroundSprite(Gem::emptyTexture)
-    , gameOverText(font)
-    , finalScoreText(font)
-    , scoreText(font)
-    , playButtonText(font)
-    , exitButtonText(font)
-    , resetButtonText(font)
-    , movimientosText(font)
+    : window(sf::VideoMode({ 800, 600 }), "Match-3 SFML 3.0")
+    , board()
+    , ui()
+    , estado(GameState::Inicio)
+    , nivelActual(0)
+    , totalNiveles(3)
+    , movimientosRestantes(0)
+    , selectedX(-1)
+    , selectedY(-1)
 {
-    std::cout << "Inicializando juego\n";
+    procesandoCombinaciones = false;
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
-    if (!font.openFromFile("assets/arial.ttf")) {
-        std::cerr << "Error cargando la fuente\n";
+    if (!board.cargarTexturas()) {
+        std::cerr << "Error: No se pudieron cargar las texturas del tablero\n";
     }
 
-    resetButton.setSize(sf::Vector2f(100.f, 40.f));
-    resetButton.setPosition(sf::Vector2f(float(BOARD_SIZE * CELL_SIZE) - 140.f, 555.f));
-    resetButton.setFillColor(sf::Color::Red);
-    resetButtonText.setFont(font);
-    resetButtonText.setString("Reiniciar");
-    resetButtonText.setCharacterSize(20);
-    resetButtonText.setFillColor(sf::Color::White);
-    resetButtonText.setPosition(sf::Vector2f(resetButton.getPosition().x + 10.f, resetButton.getPosition().y + 5.f));
+    cargarNiveles();
+}
 
-    gameOverText = sf::Text(font, "Juego terminado", 50);
-    gameOverText.setFillColor(sf::Color::Red);
-    gameOverText.setPosition({ 200.f, 200.f });
+void Game::cargarNiveles() {
+    niveles[0] = Level(1, "Nivel Fácil", 15);
+    niveles[0].setIceCount(3);
+    niveles[0].addObjective(ObjectiveType::CLEAR_ICE, 3, "Romper 3 bloques de hielo");
+    niveles[0].addObjective(ObjectiveType::REACH_SCORE, 700, "Alcanzar 700 puntos");
 
-    finalScoreText = sf::Text(font, "", 30);
-    finalScoreText.setFillColor(sf::Color::White);
-    finalScoreText.setPosition({ 220.f, 280.f });
 
-    playButton.setSize({ 200.f, 60.f });
-    playButton.setPosition({ 300.f, 250.f });
-    playButton.setFillColor(sf::Color::Blue);
-    playButtonText.setFont(font);
-    playButtonText.setString("Jugar");
-    playButtonText.setCharacterSize(30);
-    playButtonText.setFillColor(sf::Color::White);
-    playButtonText.setPosition(sf::Vector2f(playButton.getPosition().x + 60.f, playButton.getPosition().y + 15.f));
+    niveles[1] = Level(2, "Nivel Intermedio", 12);
+    niveles[1].setIceCount(5);
+    niveles[1].addObjective(ObjectiveType::CLEAR_ICE, 5, "Romper 5 bloques de hielo");
+    niveles[1].addObjective(ObjectiveType::REACH_SCORE, 1000, "Alcanzar 1000 puntos");
 
-    exitButton.setSize(sf::Vector2f(100.f, 40.f));
-    exitButton.setPosition(sf::Vector2f(float(BOARD_SIZE * CELL_SIZE) - 10.f, 555.f));
-    exitButton.setFillColor(sf::Color::Red);
-    exitButtonText.setFont(font);
-    exitButtonText.setString("Salir");
-    exitButtonText.setCharacterSize(20);
-    exitButtonText.setFillColor(sf::Color::White);
-    exitButtonText.setPosition(sf::Vector2f(exitButton.getPosition().x + 30.f, exitButton.getPosition().y + 5.f));
-
-    scoreText.setCharacterSize(24);
-    scoreText.setFillColor(sf::Color::Red);
-    scoreText.setPosition({ 230.f, 550.f });
-
-    movimientosText.setCharacterSize(24);
-    movimientosText.setFillColor(sf::Color::Yellow);
-    movimientosText.setPosition({ 10.f, 550.f });
-
-    if (backgroundTexture.loadFromFile("assets/background.png")) {
-        backgroundSprite.setTexture(backgroundTexture);
-        sf::Vector2u textureSize = backgroundTexture.getSize();
-        sf::Vector2u windowSize = window.getSize();
-        float scaleX = float(windowSize.x) / textureSize.x * 1.3f;
-        float scaleY = float(windowSize.y) / textureSize.y * 1.1f;
-        backgroundSprite.setScale(sf::Vector2f(scaleX, scaleY));
-        std::cout << "Background cargado y ajustado\n";
-    }
-    else {
-        std::cerr << "Error cargando background.png\n";
-    }
-
-    std::cout << "Cargando texturas de gemas...\n";
-    gemTextures.resize(NUM_GEMS);
-    for (int i = 0; i < NUM_GEMS; ++i) {
-        std::string filename = "assets/gem" + std::to_string(i) + ".png";
-        if (!gemTextures[i].loadFromFile(filename))
-            std::cerr << "Error cargando " << filename << "\n";
-        else
-            std::cout << filename << " cargada\n";
-    }
-
-    std::cout << "Inicializando tablero...\n";
-    std::cout << "Tablero inicializado\n";
-    actualizarSpritesDesdeBoard();
-    std::cout << "Sprites actualizados\n";
-
-    movimientosRestantes = 20;
-    selectedX = -1;
-    selectedY = -1;
+    niveles[2] = Level(3, "Nivel Difícil", 10);
+    niveles[2].setIceCount(6);
+    niveles[2].addObjective(ObjectiveType::CLEAR_ICE, 6, "Romper 6 bloques de hielo");
+    niveles[2].addObjective(ObjectiveType::REACH_SCORE, 1000, "Alcanzar 1000 puntos");
 }
 
 void Game::run() {
-    std::cout << "Inicio del ciclo principal\n";
     while (window.isOpen()) {
-        std::cout << "Nuevo ciclo\n";
+        deltaTime = gameClock.restart().asSeconds();
+
         procesarEventos();
-        actualizarTexto();
+        actualizar();
         dibujar();
     }
-    std::cout << "Fin del ciclo principa              l\n";
 }
 
+void Game::iniciarNivel(int numeroNivel) {
+    if (numeroNivel >= 1 && numeroNivel <= totalNiveles) {
+        nivelActual = numeroNivel - 1;
+        niveles[nivelActual].reset();
+
+        board.reset();
+        board.generarHieloAleatorio(niveles[nivelActual].getIceCount());
+
+        movimientosRestantes = niveles[nivelActual].getMoveLimit();
+        board.setScore(0);
+
+        cambiarEstado(GameState::Jugando);
+        std::cout << "=== INICIANDO NIVEL " << numeroNivel << " ===" << std::endl;
+        std::cout << "Nombre: " << niveles[nivelActual].getName() << std::endl;
+        std::cout << "Movimientos: " << movimientosRestantes << std::endl;
+        std::cout << "Hielo: " << niveles[nivelActual].getIceCount() << std::endl;
+
+        // Mostrar objetivos
+        for (int i = 0; i < niveles[nivelActual].getObjectiveCount(); i++) {
+            LevelObjective obj = niveles[nivelActual].getObjectives()[i];
+            std::cout << "Objetivo " << (i + 1) << ": " << obj.getDescription() << std::endl;
+        }
+        std::cout << "====================" << std::endl;
+    }
+}
+
+void Game::verificarObjetivosNivel() {
+    if (estado != GameState::Jugando) return;
+
+    Level* nivel = &niveles[nivelActual];
+
+    nivel->updateObjective(ObjectiveType::REACH_SCORE, board.getScore());
+
+    // Verificar si el nivel esta completado
+    if (nivel->checkLevelCompleted()) {
+        completarNivel();
+    }
+    else if (movimientosRestantes <= 0) {
+        fallarNivel();
+    }
+}
+
+void Game::completarNivel() {
+    std::cout << "NIVEL " << (nivelActual + 1) << " COMPLETADO !" << std::endl;
+    cambiarEstado(GameState::NivelCompletado);
+}
+
+void Game::fallarNivel() {
+    std::cout << "Nivel " << (nivelActual + 1) << " fallado - Sin movimientos" << std::endl;
+    cambiarEstado(GameState::NivelFallado);
+}
+
+void Game::updateAnimations(float deltaTime) {
+    float correctedDelta = deltaTime;
+    if (correctedDelta > 0.1f) {
+        correctedDelta = 0.016f;
+    }
+    animations.update(correctedDelta);
+}
+
+
+void Game::procesarSeleccionNivel(const sf::Vector2f& worldPos) {
+    if (ui.isNivel1ButtonClicked(worldPos)) {
+        iniciarNivel(1);
+    }
+    else if (ui.isNivel2ButtonClicked(worldPos)) {
+        iniciarNivel(2);
+    }
+    else if (ui.isNivel3ButtonClicked(worldPos)) {
+        iniciarNivel(3);
+    }
+    else if (ui.isExitButtonClicked(worldPos)) {
+        cambiarEstado(GameState::Inicio);
+    }
+}
+
+
 void Game::procesarEventos() {
-    while (const std::optional<sf::Event> eventOpt = window.pollEvent()) {
-        const sf::Event& event = *eventOpt;
-        if (event.is<sf::Event::Closed>()) {
+    while (const std::optional<sf::Event> event = window.pollEvent()) {
+        if (event->is<sf::Event::Closed>()) {
             window.close();
         }
-        else if (event.is<sf::Event::MouseButtonPressed>()) {
-            auto mousePress = event.getIf<sf::Event::MouseButtonPressed>();
-            if (mousePress->button == sf::Mouse::Button::Left) {
+        else if (auto* mouseEvent = event->getIf<sf::Event::MouseButtonPressed>()) {
+            if (mouseEvent->button == sf::Mouse::Button::Left) {
                 sf::Vector2i pixelPos = sf::Mouse::getPosition(window);
                 sf::Vector2f worldPos = window.mapPixelToCoords(pixelPos);
-                if (estado == GameState::Inicio && playButton.getGlobalBounds().contains(worldPos)) {
-                    estado = GameState::Jugando;
-                }
-                else if (estado == GameState::Jugando) {
-                    if (resetButton.getGlobalBounds().contains(worldPos)) {
+
+                switch (estado) {
+                case GameState::Inicio:
+                    if (ui.isPlayButtonClicked(worldPos)) {
+                        cambiarEstado(GameState::SeleccionNivel);
+                    }
+                    break;
+
+                case GameState::SeleccionNivel:
+                    if (ui.isNivel1ButtonClicked(worldPos)) {
+                        iniciarNivel(1);
+                    }
+                    else if (ui.isNivel2ButtonClicked(worldPos)) {
+                        iniciarNivel(2);
+                    }
+                    else if (ui.isNivel3ButtonClicked(worldPos)) {
+                        iniciarNivel(3);
+                    }
+                    else if (ui.isExitButtonClicked(worldPos)) {
+                        cambiarEstado(GameState::Inicio);
+                    }
+                    break;
+
+                case GameState::Jugando:
+                    if (ui.isResetButtonClicked(worldPos)) {
                         reiniciarJuego();
                     }
-                    else if (exitButton.getGlobalBounds().contains(worldPos)) {
+                    else if (ui.isExitButtonClicked(worldPos)) {
                         window.close();
                     }
                     else {
-                        int col = int(worldPos.x) / CELL_SIZE;
-                        int row = int(worldPos.y) / CELL_SIZE;
+                        int col = static_cast<int>(worldPos.x) / CELL_SIZE;
+                        int row = static_cast<int>(worldPos.y) / CELL_SIZE;
                         procesarClick(col, row);
-                        if (movimientosRestantes <= 0) {
-                            estado = GameState::Fin;
-                        }
                     }
-                }
-                else if (estado == GameState::Fin) {
-                    if (resetButton.getGlobalBounds().contains(worldPos)) {
+                    break;
+
+                case GameState::NivelCompletado:
+                case GameState::NivelFallado:
+                    if (ui.isResetButtonClicked(worldPos)) {
                         reiniciarJuego();
-                        estado = GameState::Inicio; // O jugamos automáticamente con GameState::Jugando
                     }
-                    else if (exitButton.getGlobalBounds().contains(worldPos)) {
+                    else if (ui.isExitButtonClicked(worldPos)) {
                         window.close();
+                    }
+                    break;
+                }
+            }
+        }
+    }
+}
+
+void Game::agregarAnimacionesCaidaSelectivas(int posicionesOriginales[BOARD_SIZE][BOARD_SIZE]) {
+    for (int r = 0; r < BOARD_SIZE; r++) {
+        for (int c = 0; c < BOARD_SIZE; c++) {
+            if (posicionesOriginales[r][c] == -1 && board.getGemType(r, c) != -1) {
+                Gem* gem = board.getGemAt(r, c);
+                if (gem) {
+                    int filaOrigen = encontrarFilaOrigen(r, c, posicionesOriginales);
+                    if (filaOrigen != -1) {
+                        animations.addGemFallAnimation(
+                            r * BOARD_SIZE + c,
+                            sf::Vector2f(c * CELL_SIZE, filaOrigen * CELL_SIZE),
+                            sf::Vector2f(c * CELL_SIZE, r * CELL_SIZE),
+                            &gem->getSprite()
+                        );
+                    }
+                    else {
+                        animations.addGemFallAnimation(
+                            r * BOARD_SIZE + c,
+                            sf::Vector2f(c * CELL_SIZE, -CELL_SIZE),
+                            sf::Vector2f(c * CELL_SIZE, r * CELL_SIZE),
+                            &gem->getSprite()
+                        );
                     }
                 }
             }
@@ -153,102 +217,216 @@ void Game::procesarEventos() {
     }
 }
 
+int Game::encontrarFilaOrigen(int filaDest, int col, int posicionesOriginales[BOARD_SIZE][BOARD_SIZE]) {
+    for (int fila = filaDest - 1; fila >= 0; fila--) {
+        if (posicionesOriginales[fila][col] != -1) {
+            return fila;
+        }
+    }
+    return -1;
+}
+
+void Game::procesarCombinacionesDespuesDeAnimacion() {
+    if (procesandoCombinaciones) {
+        return;
+    }
+
+    board.verificarCombinacionesCercaDeHielo(selectedY, selectedX);
+    procesandoCombinaciones = true;
+
+    int posicionesAntes[BOARD_SIZE][BOARD_SIZE];
+    for (int r = 0; r < BOARD_SIZE; r++) {
+        for (int c = 0; c < BOARD_SIZE; c++) {
+            posicionesAntes[r][c] = board.getGemType(r, c);
+        }
+    }
+
+    board.aplicarGravedad();
+    agregarAnimacionesCaidaSelectivas(posicionesAntes);
+}
 
 void Game::procesarClick(int col, int row) {
-    if (col < 0 || col >= BOARD_SIZE || row < 0 || row >= BOARD_SIZE)
-        return;
-
-    if (movimientosRestantes <= 0) {
-        std::cout << "¡Sin movimientos restantes!\n";
+    if (col < 0 || col >= BOARD_SIZE || row < 0 || row >= BOARD_SIZE) return;
+    if (movimientosRestantes <= 0) return;
+    if (animations.isAnimating()) {
+        std::cout << "Esperando a que terminen las animaciones...\n";
         return;
     }
 
     if (selectedX == -1 && selectedY == -1) {
         selectedX = col;
         selectedY = row;
-        std::cout << "Seleccionado tile: (" << selectedX << "," << selectedY << ")\n";
+        std::cout << "Seleccionado: (" << col << ", " << row << ")\n";
     }
     else {
         int dx = std::abs(col - selectedX);
         int dy = std::abs(row - selectedY);
+
         if ((dx == 1 && dy == 0) || (dx == 0 && dy == 1)) {
-            if (board.intercambiar(selectedX, selectedY, col, row)) {
-                std::cout << "Movimiento válido, actualizando sprites\n";
-                actualizarSpritesDesdeBoard();
-                movimientosRestantes--;
+            if (board.esIntercambioValido(selectedX, selectedY, col, row)) {
+                sf::Vector2f pos1Original(selectedX * CELL_SIZE, selectedY * CELL_SIZE);
+                sf::Vector2f pos2Original(col * CELL_SIZE, row * CELL_SIZE);
+
+                Gem* gem1Original = board.getGemAt(selectedY, selectedX);
+                Gem* gem2Original = board.getGemAt(row, col);
+
+                bool intercambioExitoso = board.intercambiar(selectedX, selectedY, col, row, false);
+
+                if (intercambioExitoso && gem1Original && gem2Original) {
+                    Gem* gem1Nueva = board.getGemAt(selectedY, selectedX);
+                    Gem* gem2Nueva = board.getGemAt(row, col);
+
+                    if (gem1Nueva && gem2Nueva) {
+                        animations.addGemSwapAnimation(1,
+                            pos2Original,
+                            sf::Vector2f(selectedX * CELL_SIZE, selectedY * CELL_SIZE),
+                            &gem1Nueva->getSprite());
+
+                        animations.addGemSwapAnimation(2,
+                            pos1Original,
+                            sf::Vector2f(col * CELL_SIZE, row * CELL_SIZE),
+                            &gem2Nueva->getSprite());
+                    }
+
+                    movimientosRestantes--;
+                    std::cout << "Movimiento valido! Movimientos restantes: " << movimientosRestantes << "\n";
+                    procesarCombinacionesDespuesDeAnimacion();
+                }
             }
             else {
-                std::cout << "Movimiento inválido, sin combinaciones.\n";
+                std::cout << "Movimiento invalido - no crea combinaciones\n";
             }
         }
+        else {
+            std::cout << "Movimiento no adyacente\n";
+        }
+
         selectedX = -1;
         selectedY = -1;
     }
 }
 
-void Game::reiniciarJuego() {
-    movimientosRestantes = 20;
-    board.generarGemas();
-    actualizarSpritesDesdeBoard();
-    board.resetScore();
-    actualizarSpritesDesdeBoard();
-    actualizarTexto();
-    std::cout << "Juego reiniciado, puntaje reseteado\n";
-}
+void Game::actualizar() {
+    updateAnimations(deltaTime);
 
-void Game::actualizarTexto() {
-    scoreText.setString("Score: " + std::to_string(board.getScore()));
-    movimientosText.setString("Movimientos: " + std::to_string(movimientosRestantes));
-}
+    if (procesandoCombinaciones && !animations.isAnimating()) {
+        int puntosExtra = board.eliminarCombinaciones();
 
-void Game::actualizarSpritesDesdeBoard() {
-    gems.clear();
-    for (int r = 0; r < BOARD_SIZE; ++r) {
-        for (int c = 0; c < BOARD_SIZE; ++c) {
-            int tipo = board.getGemType(r, c);
-            if (tipo >= 0 && tipo < static_cast<int>(gemTextures.size())) {
-                sf::Sprite sprite(gemTextures[tipo]);
-                sprite.setScale(sf::Vector2f(
-                    float(CELL_SIZE) / gemTextures[tipo].getSize().x,
-                    float(CELL_SIZE) / gemTextures[tipo].getSize().y
-                ));
-                sprite.setPosition(sf::Vector2f(
-                    float(c * CELL_SIZE),
-                    float(r * CELL_SIZE)
-                ));
-                gems.push_back(sprite);
+        if (puntosExtra > 0) {
+            std::cout << "¡COMBINACION EN CADENA! Puntos: " << puntosExtra << std::endl;
+            board.aplicarGravedad();
+            procesandoCombinaciones = false;
+            procesarCombinacionesDespuesDeAnimacion();
+        }
+        else {
+            procesandoCombinaciones = false;
+
+            for (int r = 0; r < BOARD_SIZE; r++) {
+                for (int c = 0; c < BOARD_SIZE; c++) {
+                    if (board.getGemType(r, c) == -1) {
+                        board.verificarCombinacionesCercaDeHielo(r, c);
+                    }
+                }
             }
+
+            verificarObjetivosNivel();
         }
     }
+
+    ui.actualizarTexto(board.getScore(), movimientosRestantes);
 }
 
 void Game::dibujar() {
     window.clear();
-    if (estado == GameState::Inicio) {
-        window.draw(playButton);
-        window.draw(playButtonText);
-    }
-    else if (estado == GameState::Jugando) {
-        window.draw(backgroundSprite);
-        for (const auto& gemSprite : gems) {
-            window.draw(gemSprite);
+
+    switch (estado) {
+    case GameState::Inicio:
+        ui.drawInicio(window);
+        break;
+
+    case GameState::SeleccionNivel:
+        ui.drawSeleccionNivel(window);
+        break;
+
+    case GameState::Jugando:
+    {
+        sf::Sprite* sprites[BOARD_SIZE * BOARD_SIZE];
+        int spriteCount;
+
+        for (int i = 0; i < BOARD_SIZE * BOARD_SIZE; i++) {
+            sprites[i] = nullptr;
         }
-        window.draw(scoreText);
-        window.draw(movimientosText);
-        window.draw(resetButton);
-        window.draw(resetButtonText);
-        window.draw(exitButton);
-        window.draw(exitButtonText);
+
+        board.obtenerSprites(sprites, spriteCount);
+        ui.drawJugando(window);
+        if (nivelActual >= 0 && nivelActual < 3) {
+            int nivelNumero = nivelActual + 1;
+            int objetivoPuntaje = 0;
+            int objetivoHielo = 0;
+            int objetivoGemas[5] = { 0 };
+            bool tieneObjetivoGemas[5] = { false };
+
+            switch (nivelNumero) {
+            case 1: // Nivel 1
+                objetivoPuntaje = 700;
+                objetivoHielo = 3;
+                break;
+            case 2: // Nivel 2
+                objetivoPuntaje = 1000;
+                objetivoHielo = 5;
+                break;
+            case 3: // Nivel 3
+                objetivoPuntaje = 1000;
+                objetivoHielo = 6;
+                break;
+            }
+            int puntajeActual = board.getScore();
+            int hieloDestruido = board.getProgresoHielo();
+            int gemasRecolectadas[5] = { 0, 0, 0, 0, 0 };
+
+            // Dibujar objetivos
+            ui.drawObjetivosNivel(window,
+                nivelNumero,
+                objetivoPuntaje,
+                objetivoHielo,
+                objetivoGemas,
+                tieneObjetivoGemas,
+                puntajeActual,
+                hieloDestruido,
+                gemasRecolectadas);
+        }
+
+        for (int i = 0; i < spriteCount; i++) {
+            if (sprites[i] != nullptr && !animations.isSpriteAnimating(sprites[i])) {
+                window.draw(*sprites[i]);
+            }
+        }
+
+        animations.draw(window);
+        board.dibujarHielo(window);
     }
-    else if (estado == GameState::Fin) {
-        gameOverText.setString("Juego terminado");
-        window.draw(gameOverText);
-        finalScoreText.setString("Puntaje final: " + std::to_string(board.getScore()));
-        window.draw(finalScoreText);
-        window.draw(resetButton);
-        window.draw(resetButtonText);
-        window.draw(exitButton);
-        window.draw(exitButtonText);
+    break;
+
+    case GameState::NivelCompletado:
+        ui.drawFin(window, board.getScore());
+        break;
+
+    case GameState::NivelFallado:
+        ui.drawFin(window, board.getScore());
+        break;
     }
+
     window.display();
+}
+
+void Game::reiniciarJuego() {
+    iniciarNivel(nivelActual + 1);
+    selectedX = -1;
+    selectedY = -1;
+    std::cout << "Juego reiniciado - Nivel " << (nivelActual + 1) << std::endl;
+}
+
+void Game::cambiarEstado(GameState nuevoEstado) {
+    estado = nuevoEstado;
+    std::cout << "Estado cambiado a: " << static_cast<int>(nuevoEstado) << "\n";
 }
